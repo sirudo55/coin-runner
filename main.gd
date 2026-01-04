@@ -25,12 +25,12 @@ func _on_game_timer_timeout() -> void:
 		_game_over()
 
 func _game_over() -> void:
-	get_tree().paused = true
+	get_tree().paused = true #そのシーンツリーにぶら下がるノードは「基本全部ストップ」
 	$GameOverLabel.visible = true
 	$RetryButton.visible = true
 
 func _game_clear() -> void:
-	get_tree().paused = true
+	get_tree().paused = true #そのシーンツリーにぶら下がるノードは「基本全部ストップ」
 	$ClearLabel.visible = true
 	$RetryButton.visible = true
 	$GameTimer.stop()
